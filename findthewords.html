@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine H5P-Seite</title>
+  <link rel="stylesheet" href="https://h5p.org/sites/all/modules/h5p/library/styles/h5p.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js"></script>
+</head>
+<body>
+  <div class="h5p-content">
+    <iframe src="https://github.com/MrTobiasWagner/Organisationslehre/blob/main/wortgitter-organisationslehre-41962.h5p" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </div>
 
+  <script>
+    // Code zum Einbetten und Anpassen der H5P-Größe
+    H5P.externalDispatcher.on('resize', function() {
+      H5P.jQuery('.h5p-content').each(function() {
+        H5P.jQuery(this).height(H5P.jQuery(this).width() * 0.5625); // 16:9 aspect ratio
+      });
+    });
+    H5P.jQuery(window).resize(function() {
+      H5P.externalDispatcher.trigger('resize');
+    });
+    H5P.externalDispatcher.trigger('resize');
+  </script>
+</body>
+</html>
