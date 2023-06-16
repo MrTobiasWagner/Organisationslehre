@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find the Words</title>
+  <style>
+    #wordsearch {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 2px;
+    }
+    .letter {
+      width: 30px;
+      height: 30px;
+      background-color: #eee;
+      text-align: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+    .found {
+      background-color: #b9f9a2;
+    }
+  </style>
+  <script>
+    function highlightWord(word) {
+      var letters = document.getElementsByClassName('letter');
+      for (var i = 0; i < letters.length; i++) {
+        if (letters[i].textContent === word) {
+          letters[i].classList.add('found');
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Find the Words</h1>
+  <div id="wordsearch">
+    <div class="letter">F</div>
+    <div class="letter">I</div>
+    <div class="letter">N</div>
+    <div class="letter">D</div>
+    <div class="letter">T</div>
+    <div class="letter">H</div>
+    <div class="letter">E</div>
+    <div class="letter">W</div>
+    <div class="letter">O</div>
+    <div class="letter">R</div>
+    <div class="letter">D</div>
+    <!-- Add more letter elements to create the word search grid -->
+  </div>
+  <button onclick="highlightWord('WORD')">Find Word</button>
+</body>
+</html>
