@@ -2,15 +2,224 @@
 <html>
 <head>
   <title>Einsendeaufgaben</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: beige;
+      text-shadow: 2px 2px 4px #000000;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      background-color: beige;
+      color: #7f7f7f;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      background-repeat: no-repeat;
+      background-size: 100% 2px;
+      background-position: 0 100%;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .background-image {
+      background-image: url('https://www.space-intelligence.com/wp-content/uploads/2022/05/goutham-krishna-h5wvMCdOV3w-unsplash-scaled.jpg');
+      background-repeat: no-repeat;
+     // background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    .disclaimer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .disclaimer-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .disclaimer-content {
+      max-width: 85%;
+      max-height: 85%;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .disclaimer-content a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #7f7f7f;
+      font-size: 18px;
+    }
+
+        .gear-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .gear {
+            position: absolute;
+            top: 70%;
+            left: 47.5%;
+            transform: translate(-50%, -50%);
+            width: 5cm;
+            height: 5cm;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .gear1 {
+            z-index: 1;
+            animation-name: spin-clockwise;
+            margin-right: 2.6cm;
+        }
+
+        .gear2 {
+            z-index: 2;
+            animation-name: spin-counter-clockwise;
+            margin-left: 2.6cm;
+	    animation-delay: 0.28s;
+        }
+
+        @keyframes spin-clockwise {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes spin-counter-clockwise {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(-360deg);
+            }
+        
+  </style>
 </head>
 <body>
-  <h1>Einsendeaufgaben</h1>
-  <ul>
-    <li><a href="https://bit.ly/3N8JQC9">Präsentation Eisbergmodell</a></li>
-    <li><a href="https://bit.ly/3NbdK8D">Geschäftsprozess darstellen und beschreiben</a></li>
-    <li><a href="https://bit.ly/448FtOp">Prozess Sachbeschädigung BPMN</a></li>
-    <li><a href="https://128.pl/H1d1T">Wandel von Organisationen</a></li>
-    <li><a href="https://mrtobiaswagner.github.io/Organisationslehre/Netzplan.jpg">Netzplan</a></li>
-  </ul>
+  <div class="background-image">
+    <h1>Einsendeaufgaben</h1>
+    <ul>
+      <li><a href="https://bit.ly/3N8JQC9">Praesentation Eisbergmodell</a></li>
+      <li><a href="https://bit.ly/3NbdK8D">Geschaeftsprozess darstellen und beschreiben</a></li>
+      <li><a href="https://bit.ly/448FtOp">Prozess Sachbeschaedigung BPMN</a></li>
+      <li><a href="https://128.pl/H1d1T">Wandel von Organisationen</a></li>
+      <li><a href="https://mrtobiaswagner.github.io/Organisationslehre/Netzplan.jpg">Netzplan</a></li>
+    </ul>
+    <div class="footer">
+  <p>Bitte lesen Sie unseren <a href="#" class="disclaimer-btn">Disclaimer</a> für weitere Informationen.</p>
+<br>
+      <p>© 2023 - Webseitenpflege: Tobias Wagner</p>
+      <p>Wallpaper: common creative license @ Unsplash by Goutham Krishna</p>
+
+    </div>
+    <div class="gears-container">
+        <img class="gear gear1" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Gear-icon.png" alt="Gear 1">
+        <img class="gear gear2" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Gear-icon.png" alt="Gear 2">
+    </div>
+    <div class="disclaimer-modal">
+      <div class="disclaimer-content">
+        <h1>Disclaimer</h1>
+
+        <h2>1. Warnhinweis zu Inhalten</h2>
+        <p>Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Der Anbieter dieser Webseite übernimmt jedoch keine Gewähr für die Richtigkeit und Aktualität der bereitgestellten kostenlosen und frei zugänglichen journalistischen Ratgeber und Nachrichten. Die Nutzung dieser Webseiteninhalte erfolgt auf eigene Gefahr. Allein durch den Aufruf dieser kostenlosen und frei zugänglichen Inhalte kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und dem Anbieter zustande, insoweit fehlt es am Rechtsbindungswillen des Anbieters.</p>
+        <h2>2. Verlinkungen</h2>
+        <p>Die Webseite enthält Verlinkungen zu anderen Webseiten ("externe Links"). Diese Webseiten unterliegen der Haftung der jeweiligen Seitenbetreiber. Bei Verknüpfung der externen Links waren keine Rechtsverstöße ersichtlich. Auf die aktuelle und künftige Gestaltung der verlinkten Seiten hat der Anbieter keinen Einfluss. Die permanente Überprüfung der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Bekanntwerden von Rechtsverstößen werden die betroffenen externen Links unverzüglich gelöscht.</p>
+        <h2>3. Urheber- und Leistungsschutzrechte</h2>
+        <p>Die auf dieser Webseite veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. Jede vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen schriftlichen Zustimmung des Anbieters oder jeweiligen Rechteinhabers. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Inhalte und Rechte Dritter sind dabei als solche gekennzeichnet. Die unerlaubte Vervielfältigung oder Weitergabe einzelner Inhalte oder kompletter Seiten ist nicht gestattet und strafbar. Lediglich die Herstellung von Kopien und Downloads für den persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt.</p>
+        <p><a href="#" class="close-btn">Schließen</a></p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const disclaimerModal = document.querySelector('.disclaimer-modal');
+    const disclaimerBtn = document.querySelector('.disclaimer-btn');
+    const closeBtn = document.querySelector('.close-btn');
+
+    disclaimerBtn.addEventListener('click', () => {
+      disclaimerModal.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      disclaimerModal.classList.remove('active');
+    });
+  </script>
 </body>
 </html>
